@@ -1,2 +1,7 @@
-export { ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from "./types";
-export { addTodo, removeTodo, toggleTodo } from "./actionCreators";
+export { ADD_TODO, REMOVE_TODO, TOGGLE_TODO, CLEAR_COMPLETED } from "./types";
+export {
+  addTodo,
+  removeTodo,
+  toggleTodo,
+  clearCompleted
+} from "./actionCreators";
