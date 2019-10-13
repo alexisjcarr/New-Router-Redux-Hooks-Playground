@@ -3,7 +3,13 @@ import { ADD_TODO, REMOVE_TODO, TOGGLE_TODO } from "../actions";
 import uuid from "uuid";
 
 const initialState = {
-  todos: []
+  todos: [
+    {
+      task: "Lower fever",
+      id: uuid.v1(),
+      completed: false
+    }
+  ]
 };
 
 export const rootReducer = (state = initialState, action) => {
