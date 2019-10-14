@@ -5,10 +5,16 @@ import Todo from "./Todo";
 
 const TodoList = () => {
   const todos = useSelector(state => state.todos);
+
   return (
     <>
       {todos.map(todo => (
-        <Todo id={todo.id} task={todo.task} completed={todo.completed} />
+        <Todo
+          key={todo.id}
+          id={todo.id}
+          task={todo.task}
+          completed={todo.completed}
+        />
       ))}
     </>
   );

@@ -8,7 +8,23 @@ import {
 import uuid from "uuid";
 
 const initialState = {
-  todos: JSON.parse(localStorage.getItem("todos")) || []
+  todos: [
+    {
+      task: "Add todos",
+      id: 1,
+      completed: false
+    },
+    {
+      task: "Fix this damn bug",
+      id: 2,
+      completed: false
+    },
+    {
+      task: "Be okay with bugs",
+      id: 3,
+      completed: false
+    }
+  ]
 };
 
 export const rootReducer = (state = initialState, action) => {
@@ -50,6 +66,7 @@ export const rootReducer = (state = initialState, action) => {
             completed: !todo.completed
           };
         }
+        return todo;
       });
 
       localStorage.setItem("todos", toggledList);
