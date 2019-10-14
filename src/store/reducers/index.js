@@ -8,7 +8,7 @@ import {
 import uuid from "uuid";
 
 const initialState = {
-  todos: [
+  todos: JSON.parse(localStorage.getItem("todos")) || [
     {
       task: "Add todos",
       id: 1,
