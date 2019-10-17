@@ -69,7 +69,7 @@ export const rootReducer = (state = initialState, action) => {
         return todo;
       });
 
-      localStorage.setItem("todos", toggledList);
+      localStorage.setItem("todos", JSON.stringify(toggledList));
 
       return {
         ...state,
@@ -79,7 +79,7 @@ export const rootReducer = (state = initialState, action) => {
     case CLEAR_COMPLETED:
       const clearedList = state.todos.filter(todo => !todo.completed);
 
-      localStorage.setItem("todos", clearedList);
+      localStorage.setItem("todos", JSON.stringify(clearedList));
 
       return {
         ...state,
